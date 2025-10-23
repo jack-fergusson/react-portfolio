@@ -1,4 +1,4 @@
 const Clubs = () => {
-  return <section>Clubs</section>;
+  return <section id="clubs">Clubs</section>;
 };
 export default Clubs;

@@ -8,7 +8,9 @@ const Navbar = () => {
         {headers.map((header, index) => {
           return (
             <div className="header" key={index}>
-              <p className="header-text">{header}</p>
+              <a className="header-text" href={"#" + header.toLowerCase()}>
+                {header}
+              </a>
             </div>
           );
         })}

@@ -26,6 +26,7 @@ export const starTexts = [
   "Degree included!",
   "New and improved!",
   "Now with React!",
+  "25% off!",
 ];
 
 export const headers = ["Projects", "Clubs", "More"];
