@@ -101,12 +101,18 @@ h1 {
 @keyframes expand-shrink {
   0% {
     width: 12vw;
+    top: 4vw;
+    right: 4vw;
   }
   50% {
     width: 16vw;
+    top: 2vw;
+    right: 2vw;
   }
   100% {
     width: 12vw;
+    top: 4vw;
+    right: 4vw;
   }
 }
 
@@ -115,28 +121,59 @@ h1 {
 }
 
 .popout {
+  background-color: var(--clr-primary);
   animation-name: expand-shrink;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  display: inline-block;
+  /* display: inline-block; */
   position: absolute;
-  top: 15%;
-  right: 5%;
+  width: 14vw;
+  top: 4vw;
+  right: 3vw;
+}
+
+.popout:hover {
+  animation-play-state: paused;
+}
+
+.popout:hover > .popout-text {
+  animation-play-state: paused;
+}
+
+.popout:active {
+  transform: rotate(-10deg);
 }
 
 .star {
   width: 100%;
-  display: inline-block;
+  /* display: inline-block; */
   transform: rotate(25deg);
+  background-color: var(--clr-primary);
+}
+
+@keyframes expand-shrink-text {
+  0% {
+    font-size: 1.2vw;
+  }
+  50% {
+    font-size: 1.6vw;
+  }
+  100% {
+    font-size: 1.2vw;
+  }
 }
 
 .popout-text {
+  animation-name: expand-shrink-text;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  font-family: "Cooper Black Light";
   text-align: center;
-  width: 100%;
+  width: 75%;
   text-transform: uppercase;
-  font-size: larger;
   color: var(--clr-primary);
-  transform: rotate(25deg);
   position: absolute;
-  top: 43%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(25deg);
 }

@@ -20,3 +20,10 @@ export const jackInfo = {
     },
   ],
 };
+
+export const starTexts = [
+  "Hire me!",
+  "Degree included!",
+  "New and improved!",
+  "Now with React!",
+];

@@ -2,7 +2,7 @@ import Face from "./Face.jsx";
 import PersonalInfo from "./PersonalInfo.jsx";
 import Popout from "./Popout.jsx";
 
-import { jackInfo } from "./data.js";
+import { jackInfo, starTexts } from "./data.js";
 
 const Hero = () => {
   return (
@@ -13,7 +13,7 @@ const Hero = () => {
           <PersonalInfo {...jackInfo} />
         </div>
       </section>
-      <Popout />
+      <Popout starTexts={starTexts} />
     </div>
   );
 };
