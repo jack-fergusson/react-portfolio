@@ -1,4 +1,4 @@
 const Clubs = () => {
-  return <div>Clubs</div>;
+  return <section>Clubs</section>;
 };
 export default Clubs;

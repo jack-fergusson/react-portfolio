@@ -12,6 +12,10 @@ const App = () => {
       <Projects />
       <Clubs />
       <More />
+      <More />
+      <More />
+      <More />
+      <More />
     </main>
   );
 };

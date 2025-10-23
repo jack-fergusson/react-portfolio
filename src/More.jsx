@@ -1,4 +1,4 @@
 const More = () => {
-  return <div>More</div>;
+  return <section>More</section>;
 };
 export default More;

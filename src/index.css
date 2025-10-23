@@ -19,7 +19,7 @@ html {
 * {
   margin: 0;
   padding: 0;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 
 @font-face {
@@ -39,16 +39,17 @@ html {
 
 body {
   font-family: "Cooper Black Light";
+  text-align: center;
 }
 
 section {
-  width: 70vw;
+  width: 85vw;
   padding: 7vh 0;
 }
 
 .container {
   width: 100%;
-  max-width: 70vw;
+  max-width: 85vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -56,13 +57,25 @@ section {
 }
 
 h1 {
-  font-weight: 100;
+  font-weight: 500;
+  font-size: 4vw;
   text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 100;
+  font-size: 2vw;
+}
+
+h3 {
+  font-weight: 100;
+  font-size: 1.75vw;
 }
 
 .hero {
   flex-direction: row;
   justify-content: left;
+  margin-bottom: 7vh;
 }
 
 .face-card {
@@ -74,13 +87,13 @@ h1 {
 
 .face {
   width: 50%;
-  padding: 0px 30px 0px 0px;
+  padding: 0px 2vw 0px 0px;
 }
 
 .face-image {
   width: 100%;
-  border-radius: 100%;
-  box-shadow: 5px 5px var(--clr-secondary);
+  border-radius: 35%;
+  box-shadow: 0.5vw 0.5vw var(--clr-secondary);
 }
 
 .personal-info {
@@ -101,17 +114,17 @@ h1 {
 @keyframes expand-shrink {
   0% {
     width: 12vw;
-    top: 4vw;
+    top: -6vw;
     right: 4vw;
   }
   50% {
     width: 16vw;
-    top: 2vw;
+    top: -8vw;
     right: 2vw;
   }
   100% {
     width: 12vw;
-    top: 4vw;
+    top: -6vw;
     right: 4vw;
   }
 }
@@ -120,16 +133,19 @@ h1 {
   position: relative;
 }
 
+.popout-holder {
+  width: 30%;
+  position: relative;
+}
+
 .popout {
   background-color: var(--clr-primary);
   animation-name: expand-shrink;
   animation-duration: 3s;
   animation-iteration-count: infinite;
-  /* display: inline-block; */
   position: absolute;
   width: 14vw;
-  top: 4vw;
-  right: 3vw;
+  border: none;
 }
 
 .popout:hover {
@@ -176,4 +192,48 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%) rotate(25deg);
+}
+
+.navbar {
+  padding: 0px;
+  position: sticky;
+  top: 0;
+}
+
+.divider {
+  background-color: var(--clr-secondary);
+  width: 100%;
+  height: 0.4vw;
+}
+
+.headers {
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.header {
+  width: 15vw;
+  padding: 0.5vw;
+}
+
+.header-text {
+  font-weight: 800;
+  text-transform: uppercase;
+  font-size: 3vw;
+  /* color: black; */
+}
+
+@keyframes red-black {
+  0% {
+    color: black;
+  }
+  50% {
+    color: var(--clr-accent);
+  }
+}
+
+.header-text:hover {
+  animation-name: red-black;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
 }
