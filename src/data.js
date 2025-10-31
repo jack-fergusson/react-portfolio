@@ -27,6 +27,19 @@ export const starTexts = [
   "New and improved!",
   "Now with React!",
   "25% off!",
+  "Bug-free!",
 ];
 
 export const headers = ["Projects", "Clubs", "More"];
+
+export const projects = [
+  {
+    name: "Wuddle!",
+    description: "Multiplayer game where you....",
+  },
+  {
+    name: "CUCC 2024",
+    description:
+      "Official website for the 2024 Canadian University Chess Championship",
+  },
+];

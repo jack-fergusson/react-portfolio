@@ -243,6 +243,24 @@ h3 {
 .header {
   width: 15vw;
   padding: 0.5vw;
+  position: relative;
+}
+
+.hand {
+  width: 5vw;
+  position: absolute;
+  bottom: -5vw;
+  left: 6.25vw;
+  transform: rotate(270deg);
+  /* visibility: hidden; */
+  transition: opacity 1.5s;
+  opacity: 0%;
+}
+
+.hand-clicked {
+  transition: none;
+  /* visibility: visible; */
+  opacity: 100%;
 }
 
 .header-text {
@@ -251,6 +269,7 @@ h3 {
   font-size: 3vw;
   color: var(--clr-text);
   text-decoration: none;
+  transition: font-size 0.5s, color 0.5s;
 }
 
 @keyframes red-black {
@@ -283,11 +302,20 @@ h3 {
 }
 
 .sticking > * > * > .header-text {
-  transition: font-size 0.5s;
   font-size: 2.5vw;
+  color: white;
+  animation-name: none;
 }
 
-.move-up {
-  position: relative;
-  bottom: 0.6vw;
+.title {
+  font-weight: 900;
+  margin-bottom: 2vw;
+  font-size: 8vw;
+}
+
+.project {
+  border: 4px solid var(--clr-secondary);
+  margin-bottom: 4vw;
+  min-height: 10vw;
+  border-radius: 10px;
 }

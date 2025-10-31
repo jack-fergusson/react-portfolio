@@ -1,5 +1,6 @@
 import { headers } from "./data";
 import { useEffect, useRef } from "react";
+import Header from "./Header";
 
 const Navbar = ({ watcher }) => {
   const navbarRef = useRef(null);
@@ -13,7 +14,6 @@ const Navbar = ({ watcher }) => {
   const navObserever = new IntersectionObserver((entries) => {
     // console.log("Hello!");
     navbarRef.current.classList.toggle("sticking", !entries[0].isIntersecting);
-    watcher.current.classList.toggle("move-up", !entries[0].isIntersecting);
   });
 
   return (
@@ -21,13 +21,7 @@ const Navbar = ({ watcher }) => {
       <div className="divider"></div>
       <div className="headers container">
         {headers.map((header, index) => {
-          return (
-            <div className="header" key={index}>
-              <a className="header-text" href={"#" + header.toLowerCase()}>
-                {header}
-              </a>
-            </div>
-          );
+          return <Header key={index} header={header} />;
         })}
       </div>
       <div className="divider"></div>
