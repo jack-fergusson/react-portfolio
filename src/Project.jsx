@@ -1,29 +1,31 @@
+import Tech from "./Tech";
+import Link from "./assets/link.png";
+
 const Project = ({ name, role, description, image, stack, link }) => {
   return (
     <div className="project container">
       <div className="project-left container">
-        <p>{name}</p>
-        <p>{role}</p>
-        <p>{description}</p>
+        <div>
+          <p className="project-title">{name}</p>
+        </div>
+        <div>
+          <p className="project-role">{role}</p>
+        </div>
+        <div>
+          <p className="project-description">{description}</p>
+        </div>
       </div>
       <div className="project-right container">
         <img className="project-image" src={image} alt={name} />
         <div className="tech-and-link container">
           <div className="tech-container container">
             {stack.map((stackItem, index) => {
-              return (
-                <img
-                  className="tech-image"
-                  key={index}
-                  src={stackItem.image}
-                  alt={stackItem.name}
-                />
-              );
+              return <Tech key={index} {...stackItem} />;
             })}
           </div>
           <div className="link">
             <a href={link} target="_blank">
-              Click
+              <img className="link-image" src={Link} alt="link" />
             </a>
           </div>
         </div>
